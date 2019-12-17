@@ -2,8 +2,25 @@
 <p><t>Đăng ký tài khoản tại https://account.mapbox.com/auth/signin/</t></p>
 <h2><b>Bước 2:</b></h2>
 <p><t>Lấy Access tokens tài khoản của bạn</t></p>
-![alt text](https://imgur.com/JNr8tVN)
-![Alt text](https://imgur.com/JNr8tVN "Optional title")
-<h2><b>Bước 2:<h2><b>
- <p><t> Lấy Access tokens tài khoản của bạn<p><t>
-Bước 3: Cài đặt Mapbox SDK cho project của bạn:
+
+![accesstoken](https://user-images.githubusercontent.com/37862349/71010807-f1f01500-211e-11ea-9333-bc3e044eda93.jpg)
+
+<h2><b>Bước 3:</b></h2>
+<p><t>Tạo projeect và cài đặt Mapbox SDK vào project của bạn</t></p>
+
+![Capture](https://user-images.githubusercontent.com/37862349/71011395-e7824b00-211f-11ea-93d9-765c0975e880.PNG)
+
+![Capture1](https://user-images.githubusercontent.com/37862349/71011526-23b5ab80-2120-11ea-816b-c84783876016.PNG)
+
+<h2><b>Bước 4:</b></h2>
+<p><t>Xin quyền truy cập vị trí</t></p>
+<h2><b>Bước 5:</b></h2>
+<p><t>Thêm file <b>main_activity.xml</b> và <b>Mainactivity.java</b> từ project của mình vào project của bạn</t></p>
+<p><b>Lưu ý: Các đặc tả của các hàm mình có commit trong code các bạn có thể đọc để hiểu cụ thể code</b></p>
+<h2><b>Bước 6:</b></h2>
+<p><t>Chạy và xem kết quả</t></p>
+
+<h1>Chúc các bạn thành công</h1>
+
+<h4>Tài liệu tham khảo: https://docs.mapbox.com/android/maps/overview/</h3>
+
