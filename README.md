@@ -7,3 +7,7 @@
 
 <h2><b>Bước 3:</b></h2>
 <p><t>Cài đặt Mapbox SDK vào project của bạn</t></p>
+
+![Capture](https://user-images.githubusercontent.com/37862349/71011395-e7824b00-211f-11ea-93d9-765c0975e880.PNG)
+
+
