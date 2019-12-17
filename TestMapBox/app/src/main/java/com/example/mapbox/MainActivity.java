@@ -1,4 +1,6 @@
 package com.example.mapbox;
+import android.app.Activity;
+import android.content.Context;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import java.util.List;
@@ -71,6 +73,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //access tokens of your account in strings.xml
         Mapbox.getInstance(this, getString(R.string.access_token));
         setContentView(R.layout.activity_main);
         mapView = findViewById(R.id.mapView);
@@ -96,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                                 .directionsRoute(currentRoute)
                                 .shouldSimulateRoute(simulateRoute)
                                 .build();
-// Call this method with Context from within an Activity
+                        // Call this method with Context from within an Activity
                         NavigationLauncher.startNavigation(MainActivity.this, options);
                     }
                 });
@@ -107,8 +110,10 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     @SuppressWarnings( {"MissingPermission"})
     @Override
     public boolean onMapClick(@NonNull LatLng point) {
+        // Check marker if existed => delete
         if(destinationPoint!=null)
             markerView.remove();
+        // draw marker
         markerView = mapboxMap.addMarker(new MarkerOptions()
                 .position(point)
                 .title("Eiffel Tower "));
@@ -116,7 +121,11 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         destinationPoint = Point.fromLngLat(point.getLongitude(), point.getLatitude());
         originPoint = Point.fromLngLat(locationComponent.getLastKnownLocation().getLongitude(),
                 locationComponent.getLastKnownLocation().getLatitude());
+
+        // get router to draw Direction
         getRoute(originPoint, destinationPoint);
+        button.setEnabled(true);
+        button.setBackgroundColor(R.color.mapbox_navigation_view_color_primary_text_dark);
         return true;
     }
 
@@ -129,7 +138,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 .getRoute(new Callback<DirectionsResponse>() {
                     @Override
                     public void onResponse(Call<DirectionsResponse> call, Response<DirectionsResponse> response) {
-// You can get the generic HTTP info about the response
+                        // You can get the generic HTTP info about the response
                         Log.d(TAG, "Response code: " + response.code());
                         if (response.body() == null) {
                             Log.e(TAG, "No routes found, make sure you set the right user and access token.");
@@ -140,7 +149,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                         }
                         currentRoute = response.body().routes().get(0);
 
-// Draw the route on the map
+                        // Draw the route on the map
                         if (navigationMapRoute != null) {
                             navigationMapRoute.removeRoute();
                         } else {
