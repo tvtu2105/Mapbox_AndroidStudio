@@ -15,7 +15,7 @@
 <h2><b>Bước 4:</b></h2>
 <p><t>Xin quyền truy cập vị trí</t></p>
 <h2><b>Bước 5:</b></h2>
-<p><t>Thêm file main_activity.xml và Mainactivity.java vào project của bạn</t></p>
+<p><t>Thêm file <b>main_activity.xml</b> và <b>Mainactivity.java</b> từ project của mình vào project của bạn</t></p>
 <h2><b>Bước 6:</b></h2>
 <p><t>Chạy và xem kết quả</t></p>
 
