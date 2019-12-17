@@ -16,10 +16,11 @@
 <p><t>Xin quyền truy cập vị trí</t></p>
 <h2><b>Bước 5:</b></h2>
 <p><t>Thêm file <b>main_activity.xml</b> và <b>Mainactivity.java</b> từ project của mình vào project của bạn</t></p>
+<p><b>Lưu ý: Các đặc tả của các hàm mình có commit trong code các bạn có thể đọc để hiểu cụ thể code</b></p>
 <h2><b>Bước 6:</b></h2>
 <p><t>Chạy và xem kết quả</t></p>
 
 <h1>Chúc các bạn thành công</h1>
 
-
+<h4>Tài liệu tham khảo: https://docs.mapbox.com/android/maps/overview/</h3>
 
